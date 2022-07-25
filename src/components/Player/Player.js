@@ -4,9 +4,10 @@ import { useState } from 'react'
 function Player() {
 
     const [playerName, setPlayerName] = useState("Player Name")
+    const [currentHP, setCurrentHP] = useState("100")
 
     return (
-        <div className='Player'>
+        <card className='Player'>
             <h2>{playerName}</h2>
             <form>
                 <input
@@ -14,8 +15,13 @@ function Player() {
                     value={playerName}
                     onChange={(e) => setPlayerName(e.target.value)}
                 />
+                <input
+                    type="text"
+                    value={currentHP}
+                    onChange={(e) => setCurrentHP(e.target.value)}
+                />
             </form>
-        </div>
+        </card>
     )
 }
 
